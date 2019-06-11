@@ -22,7 +22,7 @@
 	
 <body>
 	
-	<center><table width="3in" height="1in" border="0">
+	<table width="3in" height="1in" border="0">
   <tbody>
 	  
 	  
@@ -33,7 +33,7 @@
 		     var packageType = getUrlVars()["PT"]; 
 		    document.write(packageType);  
 	      </script>
-	      dsfa
+	     
 	      
 	      </center>
 		  </td>
@@ -50,8 +50,27 @@
             </center>
         </td>
     </tr>
+	
+	
+	
+	 <tr>
+      <td><center>
+		 <center> 
+	      <script>
+		     var orderNumber = getUrlVars()["ON"]; 
+		    document.write(orderNumber);  
+	      </script>
+	    
+	      </center>
+	      </center>
+		  </td>
+	  </tr>
+	
+	
+	
+	
   </tbody>
-</table></center>
+</table>
 	
 
 <script>
@@ -63,7 +82,7 @@
   		format: barcodeType,
   		width: width,
   		height: height,
-  		displayValue: true
+  		displayValue: false
 		});
 	
 </script>
