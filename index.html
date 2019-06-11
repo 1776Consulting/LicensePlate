@@ -17,13 +17,26 @@
 </script>
 	
 	
+	<script>
+		JsBarcode("#barcode", data, 
+			  {
+  		format: "pharmacode",
+  		lineColor: "#0aa",
+  		width: 4,
+  		height: 40,
+  		displayValue: false
+		}
+			 );
+	</script>
+	
+	
 <body>
 	
-		
+	<svg id="barcode"></svg>	
 	
 <img class="barcode"
   jsbarcode-format="CODE39"
-  jsbarcode-value= 'data'
+  jsbarcode-value="test"
 
   jsbarcode-textmargin="0"
   jsbarcode-fontoptions="bold">
