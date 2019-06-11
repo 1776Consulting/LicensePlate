@@ -17,10 +17,18 @@
 </script>
 	
 	
+	
+	
+	
+	
+	
+<body>
+	
+	
 	<script>
-		JsBarcode("#barcode", data, 
+		JsBarcode("#barcode", "appleNew", 
 			  {
-  		format: "pharmacode",
+  		format: "CODE39",
   		lineColor: "#0aa",
   		width: 4,
   		height: 40,
@@ -30,10 +38,14 @@
 	</script>
 	
 	
-<body>
 	
-	<svg id="barcode"></svg>	
+	<svg id="barcode"></svg>
 	
+	
+	
+	
+	<br><br>
+	IMG<br>
 <img class="barcode"
   jsbarcode-format="CODE39"
   jsbarcode-value="test"
@@ -45,11 +57,15 @@
 
 <br><br>
 	
+	
+	
+	
 	<script>
 		var data = getUrlVars()["data"];
+
 	</script>
 	 <script>
-document.write(apple);
+document.write(data);
 </script>
 
 
