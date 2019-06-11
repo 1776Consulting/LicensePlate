@@ -8,12 +8,13 @@
 	
 	
 	<script>
-		function getUrlParameter(name) {
-    name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
-    var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
-    var results = regex.exec(location.search);
-    return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
-};
+		function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+    return vars;
+}
 </script>
 	
 	
@@ -29,10 +30,8 @@
 		JsBarcode("#barcode", "appleNew", 
 			  {
   		format: "CODE39",
-  		lineColor: "#0aa",
-  		width: 4,
-  		height: 40,
-  		displayValue: false
+  		
+  		displayValue: true
 		}
 			 );
 	</script>
