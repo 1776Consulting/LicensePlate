@@ -7,27 +7,23 @@
 <script type="text/javascript" src="https://cdn.jsdelivr.net/jsbarcode/3.6.0/JsBarcode.all.min.js"></script>
 	
 	
-	<script type="text/javascript">
-	function getUrlVars() {
-    var vars = {};
-    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
-        vars[key] = value;
-    });
-    return vars;
-}	
+	<script>
+		function getUrlParameter(name) {
+    name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+    var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+    var results = regex.exec(location.search);
+    return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+};
 </script>
 	
 	
 <body>
 	
-		<script>
-		var barcodeData = getUrlVars()["data"];
 		
-		</script
 	
 <img class="barcode"
   jsbarcode-format="CODE39"
-  jsbarcode-value= (barcodeData)
+  jsbarcode-value= 'data'
 
   jsbarcode-textmargin="0"
   jsbarcode-fontoptions="bold">
@@ -35,8 +31,12 @@
 	
 
 <br><br>
-	  <script>
-document.write(barcodeData);
+	
+	<script>
+		var data = getUrlVars()["data"];
+	</script>
+	 <script>
+document.write(apple);
 </script>
 
 
