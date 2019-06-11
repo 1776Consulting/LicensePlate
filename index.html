@@ -26,47 +26,22 @@
 <body>
 	
 	
-	<script>
-		JsBarcode("#barcode", "appleNew", 
-			  {
-  		format: "CODE39",
-  		
-  		displayValue: true
-		}
-			 );
-	</script>
-	
-	
-	
-	<svg id="barcode"></svg>
-	
-	
-	
-	
-	<br><br>
-	IMG<br>
-<img class="barcode"
-  jsbarcode-format="CODE39"
-  jsbarcode-value="test"
-
-  jsbarcode-textmargin="0"
-  jsbarcode-fontoptions="bold">
-</img>
-	
-
-<br><br>
-	
 	
 	
 	
 	<script>
-		var data = getUrlVars()["data"];
+		var orderNumber = getUrlVars()["ON"];
 
 	</script>
 	 <script>
-document.write(data);
+document.write(orderNumber);
 </script>
 
+	
+	</br><hr></br>
+<script>JsBarcode("#barcode", orderNumber);
+</script>
+<svg id="barcode"></svg>
 
 
 
