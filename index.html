@@ -27,7 +27,7 @@
 	
 	
 	<script>
-		var orderNumber = getUrlVars()["ON"];
+		
 
 	</script>
 	 <script>
@@ -40,7 +40,10 @@ document.write(orderNumber);
 <img id="barcode"></img>
 
 <script>
-JsBarcode("#barcode", "Hi world!");
+	var orderNumber = getUrlVars()["ON"];
+	JsBarcode("#barcode", orderNumber
+		 
+		 );
 </script>
 
 	
