@@ -20,14 +20,24 @@
 	
 <body>
 	
+		<script>
+		var barcodeData = getUrlVars()["data"];
+		
+		</script
+	
 <img class="barcode"
   jsbarcode-format="CODE39"
-  jsbarcode-value="taco"
-     
+  jsbarcode-value= barcodeData
+
   jsbarcode-textmargin="0"
   jsbarcode-fontoptions="bold">
 </img>
 	
+
+<br><br>
+	  <script>
+document.write barcodeData;
+</script>
 
 
 
