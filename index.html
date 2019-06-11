@@ -26,12 +26,21 @@
 
 <script>
 	var orderNumber = getUrlVars()["ON"];
-	JsBarcode("#barcode", orderNumber
-		 );
+	var barcodeType = getUrlVars()["type"];
+	var width = getUrlVars()["width"];
+	var height = getUrlVars()["height"];
+	JsBarcode("#barcode", orderNumber, {
+  		format: barcodeType,
+  		width: width,
+  		height: height,
+  		displayValue: true
+		});
 	
 </script>
 
-	
+	<!--Reference: https://lindell.me/JsBarcode/ -->
+
+
 	
 	
 </body>
